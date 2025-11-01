@@ -1,22 +1,20 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
-    TextBox textBoxId = new TextBox();
-    textBoxId.setText("Enter Id");
-    textBoxId.printText();
+    Employee baseEmployee = new Employee();
+    baseEmployee.setBaseSalary(50000);
+    baseEmployee.setExtraHour(20);
+    baseEmployee.setExtraHour(200);
 
-    TextBox textBoxAddress = new TextBox();
-//    textBoxAddress.text = "Enter Address";
-    textBoxAddress.setText("Enter Id");
-    textBoxAddress.printText();
+    int salary = baseEmployee.calculateSalary();
+    System.out.println(salary);
 
-    TextBox textBoxEmail = new TextBox();
-    textBoxEmail.setText("Enter Email");
-    textBoxEmail.printText();
+    Employee lecturer = new Employee();
+    baseEmployee.setBaseSalary(50000);
+    baseEmployee.setExtraHour(20);
+    baseEmployee.setHourlyRate(200);
 
-    TextBox textBoxQuestion = new TextBox();
-    textBoxQuestion.setText("Enter question");
-    textBoxQuestion.printText();
-//    textBoxQuestion.clearText();
-//    textBoxQuestion.printText();
+    int salaryLecturer = baseEmployee.calculateSalary();
+    System.out.println(salaryLecturer);
+    System.out.println(lecturer.getBaseSalary());
 }
